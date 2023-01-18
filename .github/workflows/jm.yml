@@ -17,14 +17,14 @@ jobs:
         env:
           CI: true
       - name: upload code coverage
-        uses: actions/upload-artifacts@v3.1.0
+        uses: actions/upload-artifact@v3.1.0
         with:
           name: codecoverage
           path: coverage
       - name: build
         run: npm run build
       - name: Upload build files
-        uses: actions/upload-artifacts@v3.1.0
+        uses: actions/upload-artifact@v3.1.0
         with:
           name: build
           path: build
